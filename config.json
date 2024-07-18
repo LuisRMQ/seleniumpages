@@ -1,0 +1,88 @@
+{
+    "instructions": [
+      {
+        "action": "open_url",
+        "url": "https://www.milb.com/mexican"
+      },
+      {
+        "action": "wait",
+        "seconds": 10
+      },
+      {
+        "action": "click_if_present",
+        "by": "xpath",
+        "value": "//button[@id='onetrust-accept-btn-handler']"
+      },
+      {
+        "action": "scroll_to_element",
+        "by": "class_name",
+        "value": "mini__toggled-table__container"
+      },
+      {
+        "action": "extract_table",
+        "by": "class_name",
+        "value": "mini__toggled-table__container",
+        "columns": [
+          {
+            "name": "Equipo",
+            "xpath": ".//td[@data-col='0']"
+          },
+          {
+            "name": "Col-1",
+            "xpath": ".//td[@data-col='1']"
+          },
+          {
+            "name": "Col-2",
+            "xpath": ".//td[@data-col='2']"
+          },
+          {
+            "name": "Col-3",
+            "xpath": ".//td[@data-col='3']"
+          },
+          {
+            "name": "Col-4",
+            "xpath": ".//td[@data-col='4']"
+          }
+        ],
+        "output_file": "EstadisticasBeisbol_LigaNORTE.xlsx"
+      },
+      {
+        "action": "click",
+        "by": "class_name",
+        "value": "p-button p-button--default b125-223"
+      },
+      {
+        "action": "wait",
+        "seconds": 10
+      },
+      {
+        "action": "extract_table",
+        "by": "class_name",
+        "value": "mini__toggled-table__container",
+        "columns": [
+          {
+            "name": "Equipo",
+            "xpath": ".//td[@data-col='0']"
+          },
+          {
+            "name": "Col-1",
+            "xpath": ".//td[@data-col='1']"
+          },
+          {
+            "name": "Col-2",
+            "xpath": ".//td[@data-col='2']"
+          },
+          {
+            "name": "Col-3",
+            "xpath": ".//td[@data-col='3']"
+          },
+          {
+            "name": "Col-4",
+            "xpath": ".//td[@data-col='4']"
+          }
+        ],
+        "output_file": "EstadisticasBeisbol_LigaSUR.xlsx"
+      }
+    ]
+  }
+  
